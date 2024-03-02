@@ -1,0 +1,59 @@
+name: 'Yandex Serverless Action'
+description: 'Deploy new version of Serverless function to Yandex Cloud'
+author: 'Nikita Pashmentov'
+branding:
+  color: 'purple'
+  icon: 'upload-cloud'
+inputs:
+  description:
+    description: 'Function description'
+    default: ''
+    required: false
+  token:
+    description: 'OAuth token'
+    default: ''
+    required: true
+  function_id:
+    description: 'Function Id in Yandex Cloud'
+    default: ''
+    required: true
+  runtime:
+    description: 'Runtime for function'
+    default: ''
+    required: true
+  entrypoint:
+    description: 'Entrypoint for function'
+    default: ''
+    required: true
+  source_folder:
+    description: 'Source directory for cloud function in repo'
+    default: '.'
+    required: false
+  exclude:
+    description: 'Exclude patterns (separated by vertical slash) for source directory'
+    default: ''
+    required: false
+  source_pattern:
+    description: 'Pattern for includes files in source directory'
+    default: '**'
+    requered: false
+  memory:
+    description: 'Memory in MB'
+    default: '128'
+    required: false
+  environment:
+    description: 'Env variables for function (separated by comma)'
+    default: ''
+    required: false
+  execution_timeout:
+    description: 'Execution timeout in seconds'
+    default: '5'
+    required: false
+  service_account:
+    description: 'Service account for function'
+    default: ''
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
