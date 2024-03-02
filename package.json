@@ -1,0 +1,21 @@
+{
+  "name": "yandex-serverless-function-action",
+  "description": "This action deploys new version of serverless function to Yandex Cloud",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "author": "Nikita Pashmentov",
+  "scripts": {
+    "start": "ts-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@yandex-cloud/nodejs-sdk": "^2.7.0",
+    "archiver": "^7.0.0"
+  }
+}
