@@ -50,7 +50,7 @@ The following settings must be passed as variables as shown in the example. Sens
 | `service_account` | Service account ID | `secret` | No |
 | `source_folder` | The local directory you wish to upload. For example, `./build`. Defaults to the root of your repository (`.`) if not provided | `env` | No |
 | `exclude` | Explicitly exclude the specified files. Defaults empty if not provided | `env` | No |
-| `source_pattern` | Pattern for includes files. Defaults empty if not provided | `env` | No |
+| `source_pattern` | Pattern for includes files. Defaults to `**` if not provided | `env` | No |
 
 
 # Scenarios
