@@ -34,7 +34,7 @@ inputs:
     default: ''
     required: false
   source_pattern:
-    description: 'Pattern for includes files in source directory'
+    description: 'Patterns (separated by vertical slash) for includes files in source directory'
     default: '**'
     requered: false
   memory:
@@ -42,7 +42,7 @@ inputs:
     default: '128'
     required: false
   environment:
-    description: 'Env variables for function (separated by comma)'
+    description: 'Environment variables for function (separated by comma)'
     default: ''
     required: false
   execution_timeout:
