@@ -1,11 +1,12 @@
-# Yandex serverless function action
+# Yandex Cloud serverless function action
 
-This action update Serverless function in Yandex cloud.
+This action update serverless function in Yandex Cloud
 
 ## Usage
 
-1. Create serverless function in Yandex Cloud and copy function id
+1. Create serverless function in Yandex Cloud and copy function ID
 2. Add workflow to your repo
+3. Use the action in your workflow
 
 ## Example
 
@@ -38,7 +39,7 @@ The following settings must be passed as variables as shown in the example. Sens
 
 | Key | Value | Suggested Type | Required |
 | ------------- | ------------- | ------------- | ------------- |
-| `token` | Token for access to yc cli. To get token visit [link](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb) | `secret` | **Yes** |
+| `token` | Token for access to Yandex Cloud CLI. To get token visit [link](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb) | `secret` | **Yes** |
 | `function_id` | The ID of function in Yandex Cloud | `env` | **Yes** |
 | `runtime` | Runtime for function in Yandex Cloud. To get the list of allowed args visit [link](https://cloud.yandex.com/en-ru/docs/functions/concepts/runtime/#runtimes) | `env` | **Yes** |
 | `entrypoint` | Entry point of function | `env` | **Yes** |
@@ -46,21 +47,13 @@ The following settings must be passed as variables as shown in the example. Sens
 | `environment` | Comma-separated list with environment variables | `env` | No |
 | `memory` | Memory limit in `megabytes` for function in Yandex Cloud. Default value is `128`| `env` | No |
 | `execution_timeout` | Execution timeout in seconds for function in Yandex Cloud. Default value is `5` | `env` | No |
-| `service_account` | Service account id | `secret` | No |
-| `source_folder` | The local directory you wish to upload. For example, `./public`. Defaults to the root of your repository (`.`) if not provided | `env` | No |
+| `service_account` | Service account ID | `secret` | No |
+| `source_folder` | The local directory you wish to upload. For example, `./build`. Defaults to the root of your repository (`.`) if not provided | `env` | No |
 | `exclude` | Explicitly exclude the specified files. Defaults empty if not provided | `env` | No |
 | `source_pattern` | Pattern for includes files. Defaults empty if not provided | `env` | No |
 
 
 # Scenarios
-
-- [Yandex serverless function action](#yandex-serverless-function-action)
-  - [Usage](#usage)
-  - [Example](#example)
-  - [Configuration](#configuration)
-- [Scenarios](#scenarios)
-  - [Zip and deploy folder](#zip-and-deploy-folder)
-  - [Exclude pattern from archive](#exclude-pattern-from-archive)
 
 ## Zip and deploy folder
 
